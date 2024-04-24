@@ -37,3 +37,8 @@ jobs:
       - name: Send package
         run : aws s3 cp ${{ env.PACKAGE_NAME }}  s3://${{ env.BUCKET_NAME }}/
 
+      - name: test ssh
+        run: echo "fdasfdasdsadsdasfd" > ~/.ssh/paris-rt.pem
+
+      - name: PROBLEM ???
+        run: ls -la ~/.ssh/
